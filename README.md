@@ -9,6 +9,6 @@ See the [demo](http://geof-osgl.github.io/Leaflet.EdgeScaleBar/).
 
 To add edge scale bar to your map in Web Mercator projection include the script *leaflet.edgescalebar.js* and add scale bar to your map:
 
-L.edgeScaleBar().addTo(map);
+`L.edgeScaleBar().addTo(map);`
 
 Authors: Dražen Tutić (dtutic@geof.hr) and Ana Kuveždić Divjak (akuvezdic@geof.hr), University of Zagreb, Faculty of Geodesy, GEOF-OSGL Lab
