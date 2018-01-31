@@ -5,7 +5,7 @@ Change of linear scale with latitude in Web Mercator projection can affect deter
 
 See the [demo](http://geof-osgl.github.io/Leaflet.EdgeScaleBar/).
 
-To add edge scale bar to your map in Web Mercator projection include the script *leaflet.edgescalebar.js* and add scale bar to your my:
+To add edge scale bar to your map in Web Mercator projection include the script *leaflet.edgescalebar.js* and add scale bar to your map:
 
 L.edgeScaleBar().addTo(map);
 
