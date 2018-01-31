@@ -221,11 +221,11 @@ L.EdgeScaleBar = L.Layer.extend({
 	// draw major ticks    
 	for (i = d_s+this._dd/2; i < d_g; i = i + this._dd) {
 	    var phi = this._invmerLength(i);			
-	    if ((phi < this._LIMIT_PHI) && (phi > -this._LIMIT_PHI)) this._draw_lat_tick(phi,10,this.options.weight*2);
+	    if ((phi < this._LIMIT_PHI) && (phi > -this._LIMIT_PHI)) this._draw_lat_tick(phi,10,this.options.weight*1.5);
 	}
 	for (i = d_s-this._dd/2; i > d_d; i = i - this._dd) {
 	    var phi = this._invmerLength(i);			
-	    if ((phi > -this._LIMIT_PHI) && (phi < this._LIMIT_PHI)) this._draw_lat_tick(phi,10,this.options.weight*2);
+	    if ((phi > -this._LIMIT_PHI) && (phi < this._LIMIT_PHI)) this._draw_lat_tick(phi,10,this.options.weight*1.5);
 	}
 	    
 	// draw minor ticks    
@@ -248,8 +248,8 @@ L.EdgeScaleBar = L.Layer.extend({
 	var dl = this._dd/(N*Math.cos(cen_p.lat*Math.PI/180.0))*180.0/Math.PI;
 	    
 	// draw major ticks    
-	for (i = cen_p.lng+dl/2; i < right_p.lng; i = i + dl) this._draw_lon_tick(i,10,this.options.weight*2);
-	for (i = cen_p.lng-dl/2; i > left_p.lng; i = i - dl) this._draw_lon_tick(i,10,this.options.weight*2);
+	for (i = cen_p.lng+dl/2; i < right_p.lng; i = i + dl) this._draw_lon_tick(i,10,this.options.weight*1.5);
+	for (i = cen_p.lng-dl/2; i > left_p.lng; i = i - dl) this._draw_lon_tick(i,10,this.options.weight*1.5);
 	
 	// draw minor ticks    
 	for (i = cen_p.lng; i < right_p.lng; i = i + dl/10) this._draw_lon_tick(i,4,this.options.weight);
