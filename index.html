@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<title>Leaflet EdgeScaleBar Demo</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+	<!-- Leaflet style. REQUIRED! -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.0.3/leaflet.css" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.0.3/leaflet.js"></script>
+
+	<style>
+		html { height: 100%; }
+		body { height: 100%; margin: 0; padding: 0;}
+		.map { width: 800px; height: 600px; }
+	</style>
+</head>
+<body>
+	<div id="map" class="map"></div>
+
+    <div>
+    </div>
+
+
+    <script src="./leaflet.edgescalebar.js"></script>
+
+	<script>
+		var _base_tile_url = 'http://{s}.tile.osm.org/{z}/{x}/{y}.png',
+            map = new L.Map('map',{zoomControl:false}).setView([0, 0], 4);
+        var baselayer = L.tileLayer(_base_tile_url, {
+            unloadInvisibleTiles: false
+        });
+        map.addLayer(baselayer);
+
+        L.edgeScaleBar().addTo(map);
+
+
+	</script>
+
+</body>
+
+</html>
